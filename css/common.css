@@ -1,0 +1,132 @@
+/** ==== General Styles ==== */
+
+:root {
+    --iris: #4d5ae5;
+    --ocean: #404bbf;
+    --navy-blue: #2e2f42;
+    --green: #31d0aa;
+    --slate: #434455;
+    --light-slate: #8e8f99;
+    --cornflower: #e7e9fc;
+    --cloud: #f4f4fd;
+    --navy-blue-modal: rgba(46, 47, 66, 0.4);
+    --grey: rgba(46, 47, 66, 0.7);
+    --white: #fff;
+    --dairy: #fcfcfc;
+    --medium-warm: #FAF9F6;
+    --paper: #F5F3EF;
+    --dark-mode: #2C2C2C;
+    --dark-mode-text: #CCCCCC;
+    --light-line: #E0E0E0;
+    --animate: 333ms cubic-bezier(0.4, 0, 0.2, 1);
+    --font-family: "Manrope", sans-serif;
+    --second-family: "Montserrat", sans-serif;
+    --third-family: "DotGothic16", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0 auto;
+    font-family: var(--font-family);
+    color: var(--navy-blue);
+    background-color: var(--medium-warm);
+}
+
+body.dark-theme-on {
+    color: var(--dark-mode-text);
+    background-color: var(--dark-mode);
+
+    & .page-header::before,
+    .header-nav-item::after,
+    .header-title::after {
+        background-color: var(--light-line);
+    }
+
+    & .page-header .container {
+        border-bottom: 1px solid var(--dark-mode-text);
+        box-shadow: 0 1px 6px 0 rgba(221, 221, 233, 0.08),
+            0 1px 1px 0 rgba(174, 175, 187, 0.16),
+            0 2px 1px 0 rgba(184, 184, 190, 0.08);
+    }
+
+    & .color-switch-btn {
+        box-shadow: 0 4px 4px 0 rgba(227, 227, 228, 0.08);
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
+ul,
+ol {
+    list-style-type: none;
+    margin: 0;
+    padding-left: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    display: block;
+    width: 100%;
+    max-height: 100%;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    line-height: 0;
+}
+
+.container {
+    padding: 40px;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.section {
+    padding: 75px 0;
+    position: relative;
+
+    &::before {
+        position: absolute;
+        content: " ";
+        top: 50px;
+        width: 100%;
+        height: 1px;
+        background-color: #e7e7e7;
+    }
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.vertical-text {
+    writing-mode: vertical-lr;
+    text-orientation: sideways;
+    transform: rotate(180deg);
+}

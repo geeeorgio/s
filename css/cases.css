@@ -1,0 +1,76 @@
+.cases-container {
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+}
+
+.cases-section-title {
+    align-self: flex-start;
+    font-weight: 800;
+    font-size: 30px;
+
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        left: -5px;
+        bottom: 0;
+        width: 5px;
+        height: 39%;
+        background-color: var(--navy-blue);
+    }
+}
+
+.cases-list {
+    display: flex;
+    flex-direction: row;
+    align-content: flex-start;
+    gap: 50px;
+    flex-grow: 1;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.cases-list-item {
+    cursor: pointer;
+    width: calc((100% - 150px) / 3.7);
+    flex: 0 0 auto;
+}
+
+.cases-item-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 15px;
+}
+
+.cases-img-wrapper {
+    position: relative;
+    overflow: hidden;
+
+    & .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.14);
+    }
+}
+
+.cases-item-img {
+    object-fit: cover;
+}
+
+.cases-item-link {
+    font-weight: 800;
+    font-size: 18px;
+}

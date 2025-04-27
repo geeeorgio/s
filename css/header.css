@@ -1,0 +1,116 @@
+.page-header {
+    position: relative;
+
+    &::before {
+        position: absolute;
+        content: " ";
+        top: 0;
+        width: 100%;
+        height: 3px;
+        background-color: var(--navy-blue)
+    }
+}
+
+.page-header .container {
+    display: flex;
+    flex-direction: column;
+    gap: 55px;
+    border-bottom: 1px solid var(--cornflower);
+    box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08),
+        0 1px 1px 0 rgba(46, 47, 66, 0.16),
+        0 2px 1px 0 rgba(46, 47, 66, 0.08);
+}
+
+.header-top-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-info-text {
+    font-weight: 800;
+    font-size: 36px;
+}
+
+.header-top-btn {
+    font-weight: 600;
+    font-size: 18px;
+    color: inherit;
+}
+
+.header-main-content-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-nav-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
+
+.header-nav-item {
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        left: -5px;
+        bottom: 0;
+        width: 2px;
+        height: 0;
+        background-color: transparent;
+        transition: height var(--animate), background-color var(--animate);
+    }
+
+    &:hover::after {
+        height: 15px;
+        background-color: var(--navy-blue)
+    }
+}
+
+.header-nav-link {
+    font-weight: 300;
+    font-size: 16px;
+    padding: 0 15px;
+
+    &:hover {
+        color: #666666;
+    }
+}
+
+.header-title {
+    position: relative;
+    font-family: var(--third-family);
+    font-weight: 400;
+    font-size: 45px;
+
+    &::after {
+        position: absolute;
+        content: " ";
+        background-color: var(--navy-blue);
+        width: 35px;
+        height: 5px;
+        bottom: 0;
+        transform: translateX(-25%);
+    }
+}
+
+.color-switch-btn {
+    align-self: flex-end;
+    text-align: center;
+    font-weight: 800;
+    font-size: 16px;
+    color: inherit;
+
+    border-radius: 4px;
+    padding: 0 20px 10px 20px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+
+    &:hover {
+        color: #666666;
+    }
+}
